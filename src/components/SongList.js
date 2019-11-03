@@ -1,6 +1,7 @@
 //this flow will be repeated for each redux use:
 import React from 'react';
 import {connect} from 'react-redux'; // 1.
+import {selectSong} from '../actions';
 
 class SongList extends React.Component {
     renderList() {
@@ -8,7 +9,10 @@ class SongList extends React.Component {
             return (
                 <div className="item" key={song.title}>
                     <div className="right floated content">
-                        <button className="ui button primary">
+                        <button
+                            className="ui button primary"
+                            onClick={() => this.props.selectSong(song)}
+                        >
                             Select
                         </button>
                     </div>
@@ -31,6 +35,8 @@ const mapStateToProps = (state) => { // 3. function mapStateToProps named accord
     return {songs: state.songs}; // result: this.props === {songs: state.songs};
 };
 
-export default connect(mapStateToProps)(SongList); // 2.
+export default connect(mapStateToProps, {
+    selectSong //ES 2015 syntax -> the same as "selectSong:selectSong"
+})(SongList); // 2.
 /*connect is function which returns a function,
 so in second brackets you see arguments of returned function*/
