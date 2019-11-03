@@ -11,7 +11,7 @@ class SongList extends React.Component {
 
 const mapStateToProps = (state) => { // function mapStateToProps named according to convention
 // we will take our state (all data we keep in redux store) and make some calculation on it
-    return state;
+    return {songs: state.songs}; // result: this.props === {songs: state.songs};
 };
 
 export default connect(mapStateToProps)(SongList);
