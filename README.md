@@ -1,4 +1,4 @@
-# Song List
+# Songs List
 
  - :mega: present and select your songs. Redux learning
  - :wrench: React + Redux, Semantic UI
