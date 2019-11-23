@@ -1,6 +1,6 @@
 # Songs List
 
- - :mega: present and select your songs. Redux learning
+ - :mega: present and select your songs. Part of course: [Modern React with Redux](https://www.udemy.com/share/100YAOBUAcc11bTHw=/), Stephen Grider, Udemy
  - :wrench: React + Redux, Semantic UI
  - :date: November 2019
  
